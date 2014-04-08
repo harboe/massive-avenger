@@ -1,0 +1,272 @@
+body {
+  background: #16588c;
+  color: #212121;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue", Verdana, Helvetica, sans-serif;
+}
+
+header {
+  background:  #fff url('/img/gradient_header_bg.png') repeat-x 0px -31px;
+}
+
+.navbar {
+  padding: 15px 15px 14px 15px;
+  margin-bottom: 0;
+}
+
+.navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-toggle:hover, .navbar-toggle:focus {
+  background-color: #ddd;
+  border-color: #888;
+}
+.navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.navbar-brand {
+  background: transparent url('/img/icon_sprite.png') -10px -10px no-repeat;
+  display: inline-block;
+  height: 46px;
+  line-height: 46px;
+  width: 190px;
+}
+
+#nav-search {
+  border-color: #e7e7e7;
+}
+
+#breadcrumb {
+  color: #999;
+  background:  #fff url('/img/gradient_header_bg.png') repeat-x 0px -31px;
+  font-size: .85em;
+  margin: 0;
+  padding: 0 0 0 10px;
+
+  padding: 8px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ececec;
+}
+#breadcrumb ul li {
+  padding: 0;
+}
+#breadcrumb ul {
+  margin: 0 0 0 -15px;
+  padding: 0;
+}
+
+.thumbnail {
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+  header {
+    background: #fff url('/img/gradient_bg.png') 0 0 repeat-x;
+  }
+
+  #nav-main {
+    clear: left;
+    position: relative;
+    left: -30px;
+    top: 18px;
+  }
+
+  #nav-main a {
+    font-weight: bold;
+    font-size: .95em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 2px 10px 10px 10px !important;
+    margin: 0 5px 0 0;
+    outline: 0;
+  }
+
+  #nav-main a.active,
+  #nav-main a:visited.active,
+  #nav-main a:hover,
+  #nav-main a:visited:hover,
+  #nav-main a:focus,
+  #nav-main a:visited:focus {
+    background: #e8e8e8;
+    border: 1px solid #fff;
+    border-bottom: none;
+    color: #003b6c;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .navbar-collapse {
+    position: relative;
+  }
+
+  #lang-wrapper {
+    position: absolute;
+    top: -8px;
+    right: 0;
+  }
+
+  #nav-lang a {
+    background: transparent;
+    margin-top: 5px;
+    padding: 10px 5px !important;
+  }
+}
+
+section {
+  padding: 15px 0;
+  background: white;
+}
+
+footer {
+  background: #16588c url('/img/gradient_bg.png') 0 -156px repeat-x;
+  color: #ffffff;
+  display: block;
+}
+footer .middle a,
+footer a:visited,
+footer .bottom a,
+footer a:visited {
+  color: #ffffff;
+}
+footer .middle a:hover,
+footer a:visited:hover,
+footer .bottom a:hover,
+footer a:visited:hover,
+footer .middle a:focus,
+footer a:visited:focus,
+footer .bottom a:focus,
+footer a:visited:focus,
+footer .middle a.active,
+footer a:visited.active,
+footer .bottom a.active,
+footer a:visited.active {
+  color: #71a7d3;
+  outline: none;
+  text-decoration: none;
+}
+footer .top {
+  height: 25px;
+  line-height: 25px;
+  text-align: right;
+}
+footer .bottom {
+  padding-top: 15px;
+  font-size: .9em;
+}
+footer .middle {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+footer .middle .list-inline {
+  position: relative;
+  top: 15px;
+}
+footer .logo {
+  margin: 15px 0 10px 0;
+  height: 75px;
+  background: #16588c url('/img/icon_sprite.png') 0 -207px no-repeat;
+}
+
+footer .contact {
+  display: block;
+  border: 1px solid #104475;
+  border-bottom: none;
+  background: #004472 url('/img/gradient_header_bg.png') 0 0 repeat-x;
+  cursor: pointer;
+  line-height: 30px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+#carousel {
+  background: #212121;
+}
+
+@media (min-width: 768px) {
+  #carousel img {
+    height: 250px;
+  }
+}
+
+#thumbnails .col-sm-4 {
+  padding-top: 30px;
+}
+
+.jumbotron {
+  margin-top: 30px;
+}
+
+
+#sidebar.affix-top {
+  position: static;
+  margin-top:25px;
+}
+
+#sidebar.affix {
+  position: fixed;
+  top:25px;
+}
+
+.affix,.affix-top {
+ position:static;
+}
+
+#toc {
+  width: 100%;
+}
+
+#toc .nav-list a {
+  text-align: right;
+}
+
+#toc > .nav-list > .nav-list {
+  display: none;
+}
+
+#toc li {
+  border-right: 1px solid #fff;
+}
+#toc li.active {
+  border-right-color: red;
+}
+
+.flag {
+  display: inline-block;
+  margin-top: 5px;
+  height: 11px;
+  line-height: 11px;
+  width: 16px;
+}
+.flag-cn {
+  background: transparent url('/img/icon_sprite.png') -5px -150px no-repeat;
+}
+.flag-de {
+  background: transparent url('/img/icon_sprite.png') -26px -150px no-repeat;
+}
+.flag-dk {
+  background: transparent url('/img/icon_sprite.png') -47px -150px no-repeat;
+}
+.flag-es {
+  background: transparent url('/img/icon_sprite.png') -67px -150px no-repeat;
+}
+.flag-fr {
+  background: transparent url('/img/icon_sprite.png') -88px -150px no-repeat;
+}
+.flag-pt {
+  background: transparent url('/img/icon_sprite.png') -110px -150px no-repeat;
+}
+.flag-ru {
+  background: transparent url('/img/icon_sprite.png') -134px -150px no-repeat;
+}
+.flag-en {
+  background: transparent url('/img/icon_sprite.png') -155px -150px no-repeat;
+}
+
