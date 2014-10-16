@@ -1,0 +1,5 @@
+[
+	{ "name": "ddk", "prefix": "", "rate": 0.2 },
+	{ "name": "usd", "prefix": "$", "rate": 0 },
+	{ "name": "eur", "prefix": "", "rate": 1.2 }
+]

@@ -1,9 +1,9 @@
 package spares
 
 import (
+	"log"
 	"net/http"
 	"time"
-	"log"
 
 	"github.com/codegangsta/martini"
 	"github.com/codegangsta/martini-contrib/binding"
@@ -39,12 +39,15 @@ func (u *LoginUserModel) Validate(errors *binding.Errors, req *http.Request) {
 
 func AccountHandlers(m *martini.ClassicMartini) {
 
-	m.Use(BearerTokenValidation);
+	m.Use(BearerTokenValidation)
 	m.Get("/account", func(r render.Render) {
 		r.HTML(200, "account/login", nil)
 	})
 	// Authenticate user
-	m.Post("/account", binding.Bind(LoginUserModel{}), func(user LoginUserModel, r render.Render) {
+	m.Post("/account", binding.Bind(LoginUserModel{}), func(user LoginUserModel, r *http.Request, render render.Render) {
+
+		log.Println("user", user.Username)
+		log.Println("pass", user.Password)
 
 		if user.Username == ValidUser && user.Password == ValidPass {
 
@@ -57,23 +60,25 @@ func AccountHandlers(m *martini.ClassicMartini) {
 
 			if err == nil {
 				data := map[string]string{"token": tokenString}
-				r.JSON(201, data)
+				render.JSON(201, data)
 				return
 			}
+
+			r.Header.Add("Authorization", tokenString)
+
 		}
 
-		r.JSON(200, nil)
+		render.Redirect("/")
 	})
 }
 
 func BearerTokenValidation(w http.ResponseWriter, r *http.Request, render render.Render) {
 
-	authHeader := r.Header["Authorization"];
-	log.Println(authHeader);
-
+	authHeader := r.Header["Authorization"]
+	log.Println(authHeader)
 
 	if r.URL.Path != AuthRedirectUrl {
-		render.Redirect(AuthRedirectUrl, 302);
+		//render.Redirect(AuthRedirectUrl, 302)
 	}
 
 }
@@ -92,8 +97,8 @@ func validateToken(token string) bool {
 	})
 
 	if err == nil && t.Valid {
-		return true;
-	} 
+		return true
+	}
 
-	return false;
+	return false
 }

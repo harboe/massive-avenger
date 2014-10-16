@@ -1,0 +1,34 @@
+<table>
+
+	<tr>
+		<td>
+			Sold To:
+			{{.Customer.Organization.Address}}
+		</td>
+		<td>
+			Invoise: {{.Proposal}}
+			Date: {{.Data}}
+			Customer PO: {{.Customer.Id}}
+			Contract: {{.Customer.Contract}}
+			Customer Vat Number: {{.Customer.Vat}}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Consigned/Shipped To: 
+			{{.Customer.Site.Address}}
+		</td>
+		<td>
+			Origin of Goods: ???
+			Terms of Sale: {{.Customer.Terms}}
+			Terms of Payment: {{.Customer.Payment}}
+			Partial/Complete: ???
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Marks:
+		</td>
+	</tr>
+
+</table>

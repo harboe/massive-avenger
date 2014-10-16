@@ -1,0 +1,22 @@
+{
+	"id": 1,
+	"name": "Ålborg Portland A/S",
+	"address": {
+		"name": "Ålborg Portland A/S",
+		"street": "Rørdalsvej 44",
+		"zip": 9100,
+		"city": "Ålborg",
+		"country": "Denmark"
+	},
+	"bank": {
+		"address": {
+			"name": "Nordea Bank Denmark A/S",
+			"state": "Copenhagen",
+			"country": "Denmark"
+		},
+		"account": "xxxx",
+		"swift": "xxxx"
+	},
+	"currency": "ddk",
+	"shipping": "???",
+}

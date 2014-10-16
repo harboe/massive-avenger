@@ -1,14 +1,13 @@
 package spares
 
 import (
-	"net/http"
 	"appengine"
 	"github.com/codegangsta/martini"
 	"github.com/codegangsta/martini-contrib/render"
+	"net/http"
 )
 
-const (
-)
+const ()
 
 func init() {
 	m := martini.Classic()
@@ -17,6 +16,8 @@ func init() {
 	}))
 
 	AccountHandlers(m)
+	AdministationHandlers(m)
+
 	m.Get("/", indexHandler)
 
 	http.Handle("/", m)
